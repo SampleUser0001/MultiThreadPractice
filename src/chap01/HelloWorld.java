@@ -38,7 +38,10 @@ class ThreadedHello implements Runnable{
 			}catch(InterruptedException ex){
 				ex.printStackTrace();
 			}
-			counter++;
+
+			synchronized (this) {
+				counter++;
+			}
 
 			System.out.printf("%s:%d\n",Thread.currentThread().getName(),counter);
 		}
