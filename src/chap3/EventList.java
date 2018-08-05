@@ -48,7 +48,7 @@ public class EventList {
 		}
 
 		String eventName = event.poll();
-		System.out.printf("%s：Get: %s", Thread.currentThread().getName(),eventName);
+		System.out.printf("%s：Get: %s\n", Thread.currentThread().getName(),eventName);
 
 		notifyAll();
 		return eventName;

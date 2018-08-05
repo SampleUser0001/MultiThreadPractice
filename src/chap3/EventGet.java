@@ -2,10 +2,17 @@ package chap3;
 
 public class EventGet implements Runnable {
 
+	private EventList eventList;
+
+	public EventGet(EventList eventList) {
+		this.eventList = eventList;
+	}
+
 	@Override
 	public void run() {
-		// TODO 自動生成されたメソッド・スタブ
-
+		for(Integer i=0;i<10;i++){
+			eventList.get();
+		}
 	}
 
 }
